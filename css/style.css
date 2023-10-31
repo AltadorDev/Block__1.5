@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 400;
+  src: url("./fonts/TTLakes-Regular.ttf") format("TrueType");
+}
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 500;
+  src: url("./fonts/TTLakes-Medium.ttf") format("TrueType");
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  background: none;
+}
+
+html,
+body {
+  font-family: "TT Lakes", "Verdana", sans-serif;
+  color: #000;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.brands {
+  background-color: #f8f8f8;
+}
+
+.brands__title {
+  padding: 16px;
+  font-family: "TT Lakes";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7e7e82;
+  font-weight: 500;
+  border-top: 1px solid #d9fff5;
+  background-image: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
+}
+
+.brands__swiper {
+  overflow: hidden;
+  max-width: 2800px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  position: relative;
+  transition: 1s;
+  max-height: 200px;
+}
+.brands__swiper::before {
+  content: "";
+  width: 24px;
+  height: 72px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    #f8f8f8 16.84%,
+    rgba(248, 248, 248, 0) 100%
+  );
+}
+.brands__swiper::after {
+  content: "";
+  width: 24px;
+  height: 72px;
+  position: absolute;
+  top: 16px;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(
+    270deg,
+    #f8f8f8 16.84%,
+    rgba(248, 248, 248, 0) 100%
+  );
+}
+
+.swiper-toggle {
+  max-height: 100vh;
+}
+
+.brands__swiper-wrapper {
+  display: flex;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
+.brands__swiper-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.brands__swiper-slide {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  display: flex;
+  min-width: 240px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  min-height: 72px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 38px;
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #dddddd;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}
+
+.brands__arrows-btn {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .brands__swiper::before,
+  .brands__swiper::after {
+    display: none;
+  }
+
+  .pagination {
+    display: none;
+  }
+
+  .brands__swiper-wrapper {
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .brands__swiper-slide {
+    min-width: 224px;
+  }
+
+  .brands__arrows-btn {
+    display: block;
+    align-items: center;
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1b1c21;
+    margin-top: 8px;
+    margin-left: 57px;
+    padding-bottom: 34px;
+    position: relative;
+  }
+
+  .brands__arrows-btn::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 12px;
+    width: 5.65px;
+    height: 5.65px;
+    border: 2px solid #41f6d7;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(135deg);
+  }
+
+  .brands__arrows-btn--clicked::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 12px;
+    width: 5.65px;
+    height: 5.65px;
+    border: 2px solid #41f6d7;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(315deg);
+  }
+
+  .brands__arrows-btn::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 5.65px;
+    height: 5.65px;
+    border: 2px solid #41f6d7;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(135deg);
+  }
+
+  .brands__arrows-btn--clicked::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 5.65px;
+    height: 5.65px;
+    border: 2px solid #41f6d7;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(315deg);
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .brands__swiper-wrapper {
+    padding-left: 32px;
+    gap: 16px 32px;
+  }
+}
