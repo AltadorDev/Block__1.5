@@ -5,8 +5,10 @@ let mySwiper;
 function mobileSlider() {
   if (window.innerWidth < 767 && slider.dataset.mobile == "false") {
     mySwiper = new Swiper(slider, {
-      slidesPerView: 1.3,
+      slidesPerView: "auto",
       spaceBetween: 16,
+      slidesOffsetBefore: 16,
+      slidesOffsetAfter: 16,
       wrapperClass: "brands__swiper-wrapper",
       slideClass: "brands__swiper-slide",
       pagination: {
