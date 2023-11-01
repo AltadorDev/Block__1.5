@@ -38,9 +38,7 @@ function mobileSlider() {
 
 mobileSlider();
 
-window.addEventListener("resize", () => {
-  mobileSlider();
-});
+window.addEventListener("resize", mobileSlider);
 
 let slidesList = document.querySelector(".brands__swiper");
 let showButton = document.querySelector(".brands__arrows-btn");
