@@ -98,6 +98,7 @@ a:hover {
 .brands__swiper-wrapper {
   display: flex;
   padding-top: 16px;
+  padding-left: 16px;
 }
 
 .brands__swiper-btn {
