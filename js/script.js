@@ -22,6 +22,9 @@ function mobileSlider() {
           slidesPerView: 3,
         },
       },
+      centeredSlides: true,
+      centerInsufficientSlides: true,
+      centeredSlidesBounds: true,
     });
 
     slider.dataset.mobile = "true";
